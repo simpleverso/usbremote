@@ -1,0 +1,4 @@
+$client = new-object System.Net.WebClient
+$client.DownloadFile("https://usbremote.azurewebsites.net/avn.jpg" , "doge.jpg")
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v WallPaper /d "%USERPROFILE%\\doge.jpg" /f
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True
